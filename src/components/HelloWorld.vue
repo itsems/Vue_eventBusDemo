@@ -6,6 +6,21 @@
     <button @click="stopAlertBus()">stopAlertBus</button>
     <button @click="startAlertBus()">startAlertBus</button>
     <button @click="onceBus()">onceBus</button>
+
+    <hr />
+    <label>
+      選擇類型：
+      <select v-model="errMes.status">
+        <option value="err">err</option>
+        <option value="info">info</option>
+        <option value="warn">warn</option>
+      </select>
+    </label>
+    <label>錯誤訊息：</label>
+    <input v-model="errMes.mes" type="text" />
+    <p>送出狀態：{{errMes.status}}</p>
+    <p>送出訊息：{{errMes.mes}}</p>
+    <button @click="pushAlertMes">送出</button>
   </div>
 </template>
 
@@ -19,8 +34,12 @@ export default {
   },
   data() {
     return {
-      message: "This is from Child1"
+      message: "我是寫在helloworld.vue的,訊息",
+      errMes: { status: "err", mes: "" }
     };
+  },
+  created() {
+    console.clear();
   },
   methods: {
     doShowAlert(msg) {
@@ -38,9 +57,13 @@ export default {
     doSomethingSpecial: function() {
       // emit the event and pass with it an object of "event data".
       this.$bus.$emit("specialEvent", {
-        msg: "This message came from the specialEvent.",
+        msg: "我是寫在helloworld.vue的物件訊息",
         title: "Trigger by PropsTester"
       });
+    },
+
+    pushAlertMes() {
+      this.$bus.$emit("pushAlertMes", this.errMes);
     }
   }
 };

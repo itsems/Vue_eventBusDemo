@@ -1,25 +1,20 @@
 <template>
   <div id="app">
     <HelloWorld />
-    <!-- <alert></alert> -->
+    <alert></alert>
   </div>
 </template>
 
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
-// import alert from "./components/alert.vue";
-
-// 方法一：使用bus為this.$bus
-
-// 方法二：
-// import { bus } from "./main"
+import alert from "./components/alert.vue";
 
 export default {
   name: "App",
   components: {
     HelloWorld,
-  },
-  
+    alert
+  }
 };
 </script>
 

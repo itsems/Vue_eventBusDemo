@@ -1,4 +1,8 @@
-# vue_event_bus
+# Vue Event Bus Demo
+
+## Medium Doc
+
+[[Vue] Event Bus 是什麼? 怎麼用?]]()
 
 ## Project setup
 ```
@@ -14,11 +18,3 @@ npm run serve
 ```
 npm run build
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

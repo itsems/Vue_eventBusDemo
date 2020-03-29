@@ -2,7 +2,7 @@
 
 ## Medium Doc
 
-[[Vue] Event Bus 是什麼? 怎麼用?]]()
+[[Vue] Event Bus 是什麼? 怎麼用?](https://medium.com/@itsems/vue-event-bus-15b76f27aeb9)
 
 ## Project setup
 ```
